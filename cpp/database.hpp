@@ -25,8 +25,8 @@ public:
     bool remove(const std::string& key);
 
 private:
-    mutable std::shared_mutex                     mutex_;  ///< Štiti pristup data_ mapi.
-    std::unordered_map<std::string, std::string>  data_;    ///< Interna pohrana podataka.
+    mutable std::shared_mutex                     mutex_; 
+    std::unordered_map<std::string, std::string>  data_;   
 
     static bool isValid(const std::string& s) {
         return !s.empty();
